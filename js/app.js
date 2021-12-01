@@ -12,7 +12,7 @@ function loadData() {
     const inputText = inputTextField.value;
     inputTextField.value = '';
 
-    const url = `https://api.openweathermap.org/data/2.5/weather?q=${inputText}&appid=4de56365f2330c1a8f494f435543313f`
+    const url = `https://api.openweathermap.org/data/2.5/weather?q=${inputText}&appid=${process.env.API_TOKEN}`
 
     fetch(url)
         .then(response => response.json())
